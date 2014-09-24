@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"sync"
+	"time"
 )
 
 var deep int
@@ -29,6 +30,7 @@ func dig(p string) {
 			go dig(child)
 		} else {
 			fmt.Println(p + fi.Name())
+			time.Sleep(time.Millisecond * 10)
 		}
 	}
 }

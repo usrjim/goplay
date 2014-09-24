@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 )
 
 var deep int
@@ -23,6 +24,7 @@ func dig(p string) {
 			dig(child)
 		} else {
 			fmt.Println(p + fi.Name())
+			time.Sleep(time.Millisecond * 10)
 		}
 	}
 }
